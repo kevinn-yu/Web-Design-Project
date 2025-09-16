@@ -51,17 +51,11 @@
             </li>
 
             <li> <a href="#">Enquiry</a></li>
-            
-            <li class="dropdown"> 
-                <a href="#">Profile</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Profile 1</a></li>
-                    <li><a href="#">Profile 2</a></li> 
-                    <li><a href="#">Profile 3</a></li>
-                </ul>
-            </li>
 
-            <li> <a href="#">Login</a></li>
+            <li> <a href="#">
+                <img src="IMAGE/login.svg" alt="Login"> Login
+                </a>
+            </li>
         </ul>
     </nav>
 
@@ -97,15 +91,52 @@
     </section>
 
     <section class="latest-promotion">
-        <div class="promotion-slider">
-            <div class="slider">
+        <h2>Latest Promotion</h2>
+            <div class="css-slider">
+                <input type="radio" name="slider" id="slide1" checked>
+                <input type="radio" name="slider" id="slide2">
+                <input type="radio" name="slider" id="slide3">
+                <input type="radio" name="slider" id="slide4">
 
-
+            <div class="slides">
+                    <img src="IMAGE/slide1.jpg" class="slide slide1" alt="Slide 1">
+                    <img src="IMAGE/slide2.jpg" class="slide slide2" alt="Slide 2">
+                    <img src="IMAGE/slide3.jpg" class="slide slide3" alt="Slide 3">
+                    <img src="IMAGE/slide4.jpg" class="slide slide4" alt="Slide 4">
             </div>
-        </div>
+
+            <div class="slider-nav">
+                    <label for="slide1"></label>
+                    <label for="slide2"></label>
+                    <label for="slide3"></label>
+                    <label for="slide4"></label>
+            </div>
+            </div>
     </section>
     
     <section class="latest-news">
+        <h2>Latest News</h2>
+        <p> We are opening a new workshop on flower arrangement techniques. Join us to learn from the experts!</p>
+        <br>
+        <div class="news-container">
+            <div class="news-item">
+                <img src="IMAGE/news1.jpg" alt="News 1">
+                <h3>Handtied Bouquet</h3>
+                <p>Spiral Handtied (round & classic), Single Stalk Bouquet, Korean Bouquet, Russian Bouquet, Mix Flowers Bouquet </p>
+            </div>
+
+             <div class="news-item">
+                <img src="IMAGE/news2.jpg" alt="News 2">
+                <h3>Florist to be 1</h3>
+                <p>Korean Bouquet, Spiral Handtied, Russian Bouquet, Mix Flowers, Bridal Bouquet, Single Stalk Bouquet, Flower Stand, Boutineer, Flower Basket, Centerpiece</p>
+            </div>
+
+             <div class="news-item">
+                <img src="IMAGE/news3.jpg" alt="News 3">
+                <h3>Florist to be 2</h3>
+                <p>Natural Design Bouquet, Korean Bouquet, Spiral Handtied, Russian Bouquet, Mix Flowers, Bridal Bouquet, Boutineer, Flowers Basket, Flowers Box, Mirror Flowers Stand</p>
+            </div>
+        </div>
 
     </section>
 
@@ -116,10 +147,10 @@
             <p>Root Flower is a dedicated florist based in Kuching, Malaysia. In addition to create beautiful floral products for customer orders, the company also provide interesting floral workshops. These workshops cover a range of skill such as hand-tied bouquets, flower arrangements, and more.
             The aim of the business is connecting the customers and administration support through a simple yet attractive website </p>
             <ul class="box">
-                <li> <a href="#"> <i class="fa-brands fa-facebook-f"> </i></a></li>
-                <li> <a href="#"> <i class="fa-brands fa-twitter"> </i></a></li>
-                <li> <a href="#"> <i class="fa-brands fa-instagram"></i></a></li>
-                <li> <a href="#"> <i class="fa-brands fa-youtube"></i></a></li>
+                <li> <a href="#"> <img src="IMAGE/facebook.svg" alt="Facebook"></a></li>
+                <li> <a href="#"> <img src="IMAGE/twitter.svg" alt="Twitter"></a></li>
+                <li> <a href="#"> <img src="IMAGE/instagram.svg" alt="Instagram"></a></li>
+                <li> <a href="#"> <img src="IMAGE/youtube.svg" alt="YouTube"></a></li>
             </ul>
         </div>
 
@@ -144,12 +175,12 @@
         <div class="contact">
             <h2>Contact Us</h2>
             <ul class="box">
-                <li> <span> <i class="fa-solid fa-location-dot"></i></span> <p> No. 123, Flower Street, Kuching, Sarawak, Malaysia </p> 
+                <li> <img src="IMAGE/location.svg" alt="Location"> <p> No. 123, Flower Street, Kuching, Sarawak, Malaysia </p> 
                 </li>
 
-                <li> <span> <i class="fa-solid fa-phone"></i> </span><p> Phone: +60 12-345 6789 </p> 
+                <li> <img src="IMAGE/phone.svg" alt="Phone"><p> Phone: +60 12-345 6789 </p> 
                 </li>
-                <li> <span> <i class="fa-solid fa-envelope"></i> </span><p> Email: rootflowerss@gmail.com</p> </li>
+                <li> <img src="IMAGE/envelope.svg" alt="Email"><p> Email: rootflowerss@gmail.com</p> </li>
             </ul>
         </div>
         </div>
@@ -159,5 +190,8 @@
 
     </footer>
 
+    <a href="profile.html" class="profile-icon" title="Go to our profile page">
+        <img src="IMAGE/profile.svg" alt="Profile">
+    </a>
 </body>
 </html>
