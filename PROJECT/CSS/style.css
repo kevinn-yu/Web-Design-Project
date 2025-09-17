@@ -236,7 +236,7 @@ nav ul li .dropdown-menu a:hover {
 
 /* Background image */
 .background-image {
-    background-image: url('https://wallpaperaccess.com/full/1238364.jpg');
+    background-image: url('IMAGE/background.jpg');
     height: 600px;
     background-size: cover;
     background-position: center;
@@ -610,4 +610,10 @@ nav ul li .dropdown-menu a:hover {
 .profile-icon:hover {
     background-color: #704b91;
     transform: translateY(-5px);
+}
+
+/* Different HTML page styles */
+/* Profile */
+.profile {
+    height: 600px;
 }
