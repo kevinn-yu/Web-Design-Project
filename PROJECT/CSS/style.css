@@ -447,7 +447,7 @@ nav ul li .dropdown-menu a:hover {
     padding: 60px 20px;
     background: #f7f7f7;
     text-align: center;
-    height: 500px;
+    height: 600px;
 }
 .latest-news h2 {
     font-size: 32px;
@@ -585,6 +585,7 @@ nav ul li .dropdown-menu a:hover {
     padding-top: 20px;
     margin-top: 40px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-style: italic;
 }
 
 /* Profile icon */
