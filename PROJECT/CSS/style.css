@@ -894,6 +894,8 @@ nav ul li .dropdown-menu a:hover {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     padding: 20px;
     height: fit-content;
+    position: sticky;
+    top: 100px;
 }
 
 .sidebar h2 {
@@ -909,9 +911,6 @@ nav ul li .dropdown-menu a:hover {
     color: black;
 }
 
-.category-list {
-    margin-bottom: 30px;
-}
 
 .category-item {
     display: block;
@@ -1098,6 +1097,12 @@ nav ul li .dropdown-menu a:hover {
 .wishlist-btn, .quick-view {
     background-color: #f1f1f1;
     color: #333;
+}
+
+.wishlist-btn img, .quick-view img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
 }
 
 .wishlist-btn:hover, .quick-view:hover {
