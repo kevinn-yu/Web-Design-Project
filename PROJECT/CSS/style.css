@@ -1012,6 +1012,34 @@ nav ul li .dropdown-menu a:hover {
     box-shadow: 0 5px 8px rgba(211, 93, 110, 0.4);
 }
 
+.back-button {
+    display: block;
+    width: auto;
+    min-width: 150px;
+    max-width: 200px;
+    height: 35px;
+    margin: 0 auto 30px;
+    background-color: #704b91;
+    color: white;
+    text-align: center;
+    line-height: 35px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: all 0.3s;
+    box-shadow: 0 3px 5px rgba(211, 93, 110, 0.3);
+    padding: 0 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.back-button:hover {
+    background-color: #3e2960;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 8px rgba(211, 93, 110, 0.4);
+}
+
 /*Profile 2 (kevinn) */
 .container {
     max-width: 800px;
@@ -1034,10 +1062,16 @@ nav ul li .dropdown-menu a:hover {
 .profile-pic {
     width: 200px;
     height: 200px;
-    border-radius: 50%;
+    border-radius: 100%;
     border: 2px groove black;
     padding: 8px;
     object-fit: cover;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .basic-info {
@@ -1072,19 +1106,19 @@ nav ul li .dropdown-menu a:hover {
 
 .profile-table-kevinn th,
 .profile-table-kevinn td {
-    border: 1px solid #dcedc8;
+    border: 1px solid #4f93d8;
     padding: 15px;
     text-align: left;
 }
 
 .profile-table-kevinn th {
-    background-color: #fce4ec;
+    background-color: #99CCFF;
     font-weight: bold;
     width: 30%;
 }
 
 .profile-table-kevinn td {
-    background-color: #f1f8e9; 
+    background-color: #CCFFFF; 
 }
 
 .email-button-kevinn {
