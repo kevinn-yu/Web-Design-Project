@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="description" content="Root Flower is a flower shop that based on Kuching, Sarawak Malaysia">
+    <meta name="keywords" content="Flower, Root Flower, Kuching, Sarawak, Malaysia">
+    <meta name="author" content="Kevinn Jose, Jiang Yu, Vincent, Ahmed">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <title>Login Form</title>
+</head>
+
+<body>
+    <header class="header">
+    <nav class="navigator">
+        <div class="left-group">
+            <span class="logo2"><img src="IMAGE/logo.jpg" alt="Root Flower Logo" width="50" height="50"></span>
+            <span class="logo">Root Flower</span>
+        </div>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbutton">
+         &#9776;
+        </label>
+        <ul>
+            <li> <a href="index.html">Home</a></li>
+
+            <li class="dropdown"> 
+                <a href="allproducts.html">Product</a>
+                <ul class="dropdown-menu">
+                    <li><a href="product1.html">Hand-bouquet</a></li>
+                    <li><a href="product2.html">CNY decoration</a></li>
+                    <li><a href="product3.html">Grand Opening</a></li>
+                    <li><a href="product4.html">Graduation</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown"> 
+                <a href="#">Activities</a>
+                <ul class="dropdown-menu">
+                    <li><a href="workshop.html">Workshop</a></li>
+                    <li><a href="promotion.html">Promotion</a></li>  
+                </ul>
+            </li>
+            <li class="dropdown"> 
+                <a href="#">Register</a>
+                <ul class="dropdown-menu">
+                    <li><a href="workshopregister.html">Workshop</a></li>
+                    <li><a href="membershipregister.html">Membership</a></li>
+                </ul>
+            </li>
+
+            <li> <a href="enquiry.html">Enquiry</a></li>
+
+            <li> <a href="login.html">
+                <img src="IMAGE/login.svg" alt="Login"> Login
+                </a>
+            </li>
+        </ul>
+    </nav>
+    </header>
+    <section class="login-section">
+    <div class="login-container">
+            <div class="login-card">
+            <h1>LOGIN</h1>
+        <form id="detail" method="post" action="mailto:vincentho6599@gmail.com">
+
+            <form class="login-form">
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+            <input type="logintext"
+                id="name"
+                name="Login" 
+                maxlength="10"
+                pattern="[A-Za-z]{1,10}"
+                title="Login must be letters only, up to 10 characters."
+                placeholder="Type your username" required> </div>
+                <br>
+                
+            
+            <div class="input-group">
+                        <i class="fas fa-lock"></i>
+            <input type="password"
+                id="password"
+                name="password"
+                maxlength="25"
+                pattern="[A-Za-z]{1,25}"
+                title="Login must be letters only, up to 25 characters."
+                placeholder="Type your password" required></div>
+                
+            <br>
+            <div class="forgot">
+            
+            <a href="forgot-password.html">Forgot Password?</a>
+            </div>
+            <br>
+
+        <div class="button-group">
+                        <button type="submit" class="login-btn">LOGIN</button>
+                        <button type= "Reset" class="clear-btn">Reset Form </button>
+                    </div>
+        <p class="separator">Or Sign up using</p>
+        <div class="social-login">
+                        <a href="https://facebook.com" class="social-btn facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com" class="social-btn twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://google.com"" class="social-btn google"><i class="fab fa-google"></i></a>
+                    </div>
+        <p class="signup-option">Or Sign up using <a href="#">SIGN UP</a></p>
+    </fieldset>
+
+    </form>
+    </section>
+    </body>
+</html>
