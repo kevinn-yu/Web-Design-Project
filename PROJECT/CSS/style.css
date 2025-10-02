@@ -368,7 +368,7 @@ nav ul li .dropdown-menu a:hover {
 
 .about-us p {
     font-size: 18px;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     line-height: 1.6;
     text-align: justify;
@@ -1392,42 +1392,61 @@ nav ul li .dropdown-menu a:hover {
 
 /* Different HTML page styles */
 /* Workshop Page */
-.workshop-banner {
-    height: 300px;
-    width: 100%;
-    position: relative;
-    background-image: url('IMAGE/workshop-background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.workshop {
     display: flex;
+    padding: 3rem 5%;
+    background-color: #3e2960;
+    margin: 2rem 5%;
+    border-radius: 8px;
     align-items: center;
-    justify-content: center;
 }
 
-.workshop-banner img {
-    display: none;
+.main-workshop {
+    flex: 1;
+    padding-right: 2rem;
 }
 
-.workshop-text {
-    position: relative;
-    z-index: 2;
-    text-align: center;
+.workshop h1 {
     color: white;
-    background: rgba(0, 0, 0, 0.4);
-    padding: 20px;
+    margin-bottom: 1rem;
+    font-size: 2.2rem;
+}
+
+.workshop p {
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.workshop a {
+    background-color: #704b91;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.workshop a:hover {
+    background-color: #8660a7;
+}
+
+.workshop-image {
+    flex: 1;
+}
+
+.workshop-image img {
+    width: 100%;
     border-radius: 8px;
 }
 
-.workshop-text h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-}
-
-.workshop-text p {
-    font-size: 1.2rem;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+.workshop-image figcaption {
+    text-align: center;
+    margin-top: 1em;
+    color: white;
+    font-style: italic;
 }
 
 .workshop-list {
