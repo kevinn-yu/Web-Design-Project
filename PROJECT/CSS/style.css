@@ -981,13 +981,13 @@ nav ul li .dropdown-menu a:hover {
 }
 
 .profile-table-jiangyu th {
-    background-color: #fce4ec;
+    background-color: cyan;
     font-weight: bold;
     width: 30%;
 }
 
 .profile-table-jiangyu td {
-    background-color: #f1f8e9; 
+    background-color: white; 
 }
 
 .email-button-jiangyu {
