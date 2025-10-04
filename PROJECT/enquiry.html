@@ -2,31 +2,28 @@
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Root Flower is a flower shop that based on Kuching, Sarawak Malaysia">
+    <meta name="description" content="Root Flower is a flower shop based in Kuching, Sarawak Malaysia">
     <meta name="keywords" content="Flower, Root Flower, Kuching, Sarawak, Malaysia">
     <meta name="author" content="Kevinn Jose, Jiang Yu, Vincent, Ahmed">
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <title>Enquiry Form</title>
+    <title>Enquiry Form - Root Flower</title>
 </head>
 <body>
 
 <!-- Navigation bar -->
-    <header class="header">
+<header class="header">
     <nav class="navigator">
         <div class="left-group">
-            <span class="logo2"><img src="IMAGE/logo.jpg" alt="Root Flower Logo" width="50" height="50"></span>
+            <span class="logo2"><img src="IMAGE/logo.jpg" alt="Root Flower Logo"></span>
             <span class="logo">Root Flower</span>
         </div>
         <input type="checkbox" id="check">
-        <label for="check" class="checkbutton">
-         &#9776;
-        </label>
+        <label for="check" class="checkbutton"> &#9776;</label>
         <ul>
             <li> <a href="index.html">Home</a></li>
-
             <li class="dropdown"> 
                 <a href="allproducts.html">Product</a>
                 <ul class="dropdown-menu">
@@ -36,7 +33,6 @@
                     <li><a href="product4.html">Graduation</a></li>
                 </ul>
             </li>
-
             <li class="dropdown"> 
                 <a href="#">Activities</a>
                 <ul class="dropdown-menu">
@@ -51,83 +47,206 @@
                     <li><a href="membershipregister.html">Membership</a></li>
                 </ul>
             </li>
-
-            <li> <a href="enquiry.html">Enquiry</a></li>
-
+            <li> <a href="enquiry.html" class="active">Enquiry</a></li>
             <li> <a href="login.html">
                 <img src="IMAGE/login.svg" alt="Login"> Login
                 </a>
             </li>
         </ul>
     </nav>
-    </header>
+</header>
 
 <section class="enquiryform">
-<form id ="detail" method = "post" action = "mailto:104405515@swinburne.edu.my">
-<h1>Enquiry Form</h1>
-<p>Complete this Enquiry Form to obtain additional information abput services or send personal complaints.We will analyze your enquiry and return to you shortly by email or phone.</p>
-
-
-	<label for ="fname">First Name:</label><br>
-	<input type="text" 
-	       id="fname"
-	       name="First Name"
-		   required
-		   maxlength="25"
-		   pattern="[A-Za-z]+" 
-           title="Only alphabetical letters allowed (A–Z)"><br></br>
-		   
-	<label for ="fname">Last Name:</label><br>
-	<input type="text" 
-	       id="fname"
-	       name="Last Name"
-		   required
-		   maxlength="25"
-		   pattern="[A-Za-z]+" 
-           title="Only alphabetical letters allowed (A–Z)"><br></br>
-		   
-	<label for ="fname">Email address:</label><br>
-	<input type="text" 
-	       id="fname"
-	       name="Email address"
-		   required
-		   placeholder="xxxxxxxxxxxx@gmail.com"><br></br>
-		   
-	<label for ="fname">Phone Number:</label><br>
-	<input type="text" 
-	       id="fname"
-	       name="Phone Number"
-		   required
-		   maxlength="10"
-		   placeholder="0123456789"><br></br>
-		   
-	<label>Enquiry:</label><br>
-	<select id="enquiry" name="enquiry" required>
-		<option value= "Please select">Please select</option>
-		<option value="tutor 1">products</option>
-		<option value="tutor 2">membership</option>
-		<option value="other">workshop</option>
-	</select><br></br>
-	
-	<label for="description">Comments:</label><br>
-    <textarea id="comments" name="comments" rows="5" cols="40" 
-              placeholder="Write comments of your problems here..." required></textarea>
-	</textarea>
-	
-	<div class="captcha-group">
-                <img src="captcha.jpg" alt="Captcha: 64 5BA" class="captcha-img">
-                <input type="text" id="captcha" name="captcha" placeholder="Enter captcha">
-            </div>
-		
-	<div class="button-group-enquiry">		
-	<button type="submit">SEND ENQUIRY</button>
-	<button type= "Reset" class="clear-btn">Reset Form </button>
+    <form id="detail" method="post" action="/submit-enquiry">
+	<div class="form-container">
+        <h1>Customer Enquiry Form</h1>
+        <p>Complete this form to get information about our services.</p>
 	</div>
-</form>
+        <!-- Personal Information Fieldset -->
+        <fieldset class="form-fieldset">
+            <legend>Personal Information</legend>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for ="firstname">First Name:</label>
+	                <input type="text" 
+	                id="firstname"
+					name="FirstName"
+					required
+					maxlength="25"
+					pattern="[A-Za-z]+" 
+					title="Only alphabetical letters allowed (A–Z)">
+                </div>
+
+                <div class="form-group">
+                    <label for="lastname">Last Name:</label>
+                    <input type="text" 
+					id="lastname"
+					name="Last Name"
+					required
+					maxlength="25"
+					pattern="[A-Za-z]+" 
+					title="Only alphabetical letters allowed (A–Z)">            
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email">Email Address:*</label>
+                    <input type="email" 
+					id="email"
+					name="Email address"
+					required
+					placeholder="xxxxxxxxxxxx@gmail.com">
+		   
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number:*</label>
+                    <input type="tel" 
+	                id="phone"
+					name="Phone Number"
+					required
+                    pattern="[0-9]{10}"
+					maxlength="10"
+					placeholder="0123456789">     
+            </div>
+            </div>
+	
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <input type="text" 
+                        id="address"
+                        name="address"
+                        required
+                        maxlength="100"
+                        placeholder="Your full address">
+                </div>
+
+                <div class="form-group">
+                    <label for="city">City:</label>
+                    <input type="text" 
+                        id="city"
+                        name="city"
+                        required
+                        maxlength="50"
+                        pattern="[A-Za-z ]+"
+                        placeholder="Your city">
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- Enquiry Details Fieldset -->
+        <fieldset class="form-fieldset">
+            <legend>Enquiry Details</legend>
+            
+            <div class="form-group">
+                <label>Preferred Contact Method:*</label>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" name="contactMethod" value="email" required> Email
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="contactMethod" value="phone"> Phone Call
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="contactMethod" value="whatsapp"> WhatsApp
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Services You're Interested In (select all):</label>
+                <div class="checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="interests" value="delivery"> Delivery
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="interests" value="custom"> Custom Arrangements
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="interests" value="workshops"> Flower Workshops
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="interests" value="subscription"> Flower Subscription
+                    </label>
+                </div>
+            </div>
+
+            <!-- Dropdown -->
+            <div class="form-group">
+                <label for="enquiryType">Type of Enquiry:*</label>
+                <select id="enquiryType" name="enquiryType" required class="form-select">
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="products">Product Information</option>
+                    <option value="pricing">Pricing & Discounts</option>
+                    <option value="membership">Membership Benefits</option>
+                    <option value="workshop">Workshop Schedules</option>
+                    <option value="complaint">Complaint</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="preferredDate">Preferred Contact Date:*</label>
+                <input type="date" 
+                    id="preferredDate"
+                    name="preferredDate"
+                    required
+                    min="2025-01-01">
+            </div>
+
+            <div class="form-group">
+                <label for="comments">Your Message:*</label>
+                <textarea id="comments" name="comments" rows="4" 
+                        placeholder="Describe your enquiry..." 
+                        required
+                        minlength="10"
+                        maxlength="500"
+                        title="Please enter at least 10 characters"></textarea>
+            </div>
+			
+			<div class="form-group">
+                    <label for="priority">Enquiry Priority</label>
+                    <input type="range" id="priority" name="priority" 
+                           min="1" max="5" value="3">
+                    <div class="priority-level">
+                        <span>Low</span>
+                        <span>High</span>
+                    </div>
+            </div>
+        </fieldset>
+
+        <fieldset class="form-fieldset">
+            <legend>Verification</legend>
+            
+            <div class="form-group captcha-group">
+                <img src="IMAGE/captcha.jpg" alt="Captcha: 64 5BA" class="captcha-img">
+                <input type="text" id="captcha" name="captcha" 
+                       placeholder="Enter captcha" 
+                       required
+                       pattern="64 5BA"
+                       title="Enter '64 5BA' as shown in the image">
+            </div>
+
+            <div class="form-group checkbox-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" name="terms" required> 
+                    I confirm that the information provided is accurate
+                </label>
+            </div>
+        </fieldset>
+
+        <div class="button-group-enquiry">        
+            <button type="submit">SEND ENQUIRY</button>
+            <button type="reset" class="clear-btn">Reset Form</button>
+        </div>
+    </form>
 </section>
 
 <!-- Footer  -->
-    <footer class="footer-content">
+<footer class="footer-content">
     <div class="footer-container">
          <div class="other">
         <h2>Others</h2>
@@ -159,7 +278,6 @@
             <ul class="box">
                 <li> <img src="IMAGE/location.svg" alt="Location"> <p> No. 123, Flower Street, Kuching, Sarawak, Malaysia </p> 
                 </li>
-
                 <li> <img src="IMAGE/phone.svg" alt="Phone"><p> Phone: +60 12-345 6789 </p> 
                 </li>
                 <li> <img src="IMAGE/envelope.svg" alt="Email"><p> Email: rootflowerss@gmail.com</p> </li>
@@ -169,7 +287,6 @@
         <div class="copyright">
         <p>&copy; 2025 Root Flower. All rights reserved.</p>
         </div>
-
-    </footer>
+</footer>
 </body>
 </html>

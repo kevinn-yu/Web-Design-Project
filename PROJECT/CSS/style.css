@@ -4,7 +4,7 @@
 }
 
 body {
-    font-family: poppins, sans-serif;
+    font: 16px/1.6 arial, sans-serif;
     background-color: white;
 }
 
@@ -561,7 +561,6 @@ nav ul li .dropdown-menu a:hover {
 /* Responsive latest news */
 @media (max-width: 1202px) {
     .latest-news {
-        
         padding: 40px 10px;
     }
     .news-container {
@@ -661,10 +660,18 @@ nav ul li .dropdown-menu a:hover {
     vertical-align: middle;
 }
 
+.contact .box a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.contact .box a:hover {
+    text-decoration: underline;
+}
+
 .copyright {
-
     width: 100%;
-
     text-align: center;
     padding: 10px 0;
     color: white;
@@ -1185,21 +1192,31 @@ nav ul li .dropdown-menu a:hover {
 /* Different HTML page styles */
 /* Product Selection Page */
 .main-content {
-    display: flex;
-    padding: 30px 5%;
-    gap: 30px;
+    padding: 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.main-content::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 /* Aside for product, workshop and promotion */
 .sidebar {
-    width: 250px;
+    width: 30%;
+    float: right;
     background-color: #f7f7f7;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     padding: 20px;
     height: fit-content;
     position: sticky;
+    border: 2px solid #e0d2ec;
     top: 100px;
+    z-index: 10;
+    box-sizing: border-box;
 }
 
 .sidebar h2 {
@@ -1213,6 +1230,11 @@ nav ul li .dropdown-menu a:hover {
 .sidebar a {
     text-decoration: none;
     color: black;
+}
+
+.sidebar ol li {
+    list-style-type: disc;
+    margin-left: 20px;
 }
 
 
@@ -1230,26 +1252,63 @@ nav ul li .dropdown-menu a:hover {
     color: white;
 }
 
-.sidebar-banner {
+.sidebar-table {
     background-color: #fce4e8;
     border-radius: 8px;
     padding: 20px;
     text-align: center;
 }
 
-.sidebar-banner h3 {
-    color: #704b91;
-    margin-bottom: 10px;
+.sidebar-table table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-.sidebar-banner p {
-    margin-bottom: 15px;
-    color: #333;
+.sidebar-table th {
+    background-color: #e2cfd2;
+    color: black;
+    font-weight: bold;
+}
+
+.sidebar-table th, .sidebar-table td {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+@media (max-width: 960px) {
+    .sidebar-table {
+        width: 80%;
+    }
+
+    .sidebar-table table {
+        font-size: 0.6rem;
+    }
+    
+    .sidebar-table th, .sidebar-table td {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar-table {
+        width: 90%;
+    }
+
+    .sidebar-table table {
+        font-size: 1rem;
+    }
+    
+    .sidebar-table th, .sidebar-table td {
+        padding: 8px;
+    }
 }
 
 /* Product selection */
 .product-section {
-    flex: 1;
+    float: left;
+    width: 68%;
+    margin-right: 2%;
+    box-sizing: border-box;
 }
 
 .section-header {
@@ -1259,9 +1318,10 @@ nav ul li .dropdown-menu a:hover {
     margin-bottom: 30px;
 }
 
-.section-header h2 {
+.section-header h1 {
     color: white;
     font-size: 1.8rem;
+    font: bold arial, sans-serif;
     text-align: center;
 }
 
@@ -1424,6 +1484,20 @@ nav ul li .dropdown-menu a:hover {
 
 
 @media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: static;
+    }
+
+    .product-section {
+        width: 100%;
+    }
+
     .product-grid {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
@@ -1435,7 +1509,7 @@ nav ul li .dropdown-menu a:hover {
     display: flex;
     padding: 3rem 5%;
     background-color: #3e2960;
-    margin: 2rem 5%;
+    margin: 2rem 2.5%;
     border-radius: 8px;
     align-items: center;
 }
@@ -1448,7 +1522,7 @@ nav ul li .dropdown-menu a:hover {
 .workshop h1 {
     color: white;
     margin-bottom: 1rem;
-    font-size: 2.2rem;
+    font: normal bold 2.2rem/30px arial, "sans-seriff";
 }
 
 .workshop p {
@@ -1498,6 +1572,9 @@ nav ul li .dropdown-menu a:hover {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
     margin-bottom: 40px;
+    width: 68%;
+    float: left;
+
 }
 
 .workshop-item {
@@ -1663,13 +1740,45 @@ nav ul li .dropdown-menu a:hover {
 }
 }
 
+@media (max-width: 768px) {
+    .workshop-grid {
+        grid-template-columns: 4fr;
+        gap: 20px;
+        float:center;
+        width: 100%;
+    }
+    
+    .workshop-item {
+        height: 300px;
+    }
+    
+    .workshop-list h1 {
+        font-size: 2rem;
+    }
+
+    .workshop-text p {
+        font-size: 1rem;
+    }
+    
+    .workshop-front .length {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 2px 0;
+}
+
+    .workshop-front .duration  {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+}
+
 /* Different HTML page styles */
 /* Promotion Page */
 .promotion {
     display: flex;
     padding: 3rem 5%;
     background-color: #3e2960;
-    margin: 2rem 5%;
+    margin: 2rem 2.5%;
     border-radius: 8px;
     align-items: center;
 }
@@ -1680,9 +1789,9 @@ nav ul li .dropdown-menu a:hover {
 }
 
 .promotion h1 {
+    font: normal bold 2.2rem/30px arial, "sans-seriff";
     color: white;
     margin-bottom: 1rem;
-    font-size: 2.2rem;
 }
 
 .promotion p {
@@ -1806,10 +1915,11 @@ nav ul li .dropdown-menu a:hover {
 }
 
 #promo-aside {
-    flex: 1;
+    float: right;
     justify-content: center;
     background-color: #f0ffff ;
     padding: 1.5rem;
+    width: 30%;
     border-radius: 8px;
 }
 
@@ -1833,6 +1943,28 @@ nav ul li .dropdown-menu a:hover {
     color: #7f8c8d;
 }
 
+.promotion-table {
+    width: 100%
+}
+
+.promotion-table p {
+    padding-bottom: 20px;
+}
+
+.promotion-table table, .promotion-table th, .promotion-table td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.promotion-table th {
+    padding: 10px;
+    text-align: center;
+}
+
+.promotion-table td {
+    padding: 10px;
+    text-align: center;
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -1861,79 +1993,155 @@ nav ul li .dropdown-menu a:hover {
 
 /* Different HTML page styles */
 /* Enquiry Page */
+
 .enquiryform {
-  background: white;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 100px;
+    background: white;
 }
 
+#detail {
+    padding: 40px;
+}
 
 .enquiryform form h1 {
-  color: #5e2b97;
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 10px;
+    color: #3e2960 ;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-align: center;
 }
 
 .enquiryform form p {
-  color: #444;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 25px;
+    color: black;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.form-fieldset {
+    max-width: 1000px; 
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #704b91;
+    border-radius: 8px;
+    padding: 1.7rem; 
+    margin-bottom: 1.5rem;
+}
+
+.form-fieldset legend {
+    font-weight: bold;
+    color: #3E2960;
+    padding: 0 10px;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
 }
 
 .enquiryform form label {
-  display: block;
-  margin-top: 20px;
-  font-weight: 600;
-  color: #333;
-  font-size: 0.95rem;
+    display: block;
+    margin-top: 20px;
+    font-weight: 500;
+    color: #333;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
 }
 
-.required {
-  color: #e60000;
-}
-
-
-.enquiryform input,
+.enquiryform input[type="text"],
+.enquiryform input[type="email"],
+.enquiryform input[type="tel"],
 .enquiryform select,
 .enquiryform textarea {
-  width: 100%;
-  padding: 12px 14px;
-  border: 1.5px solid #c6c6c6;
-  border-radius: 8px;
-  font-size: 1rem;
-  outline: none;
-  transition: all 0.3s ease;
-  margin-top: 6px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    margin-top: 6px;
 }
 
 .enquiryform button {
-  display: block;
-  width: 100%;
-  background: #3e2960 ;
-  color: white;
-  padding: 14px;
-  border: none;
-  border-radius: 10px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  margin-top: 20px;
-  transition: background 0.3s ease, transform 0.2s ease;
+    display: block;
+    width: 100%;
+    background: #3e2960 ;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.enquiryform input:focus {
+.enquiryform input[type="text"]:focus,
+.enquiryform input[type="email"]:focus,
+.enquiryform input[type="tel"]:focus,
+.enquiryform select:focus,
+.enquiryform textarea:focus {
   border-color: #5e2b97;
   box-shadow: 0 0 5px rgba(94, 43, 151, 0.5);
 }
 
+#priority {
+    width: 1000px; 
+    min-width: 300px;
+    margin-top: 8px;
+}
+
+.priority-level {
+    display: flex; 
+    justify-content: space-between;
+}
+
+.button-group-enquiry {
+    display: flex;
+    justify-content: center; 
+    gap: 20px; 
+    margin: 25px auto; 
+    max-width: 1050px; 
+}
+
+
+.button-group-enquiry button {
+    flex: none; 
+    width: 180px; 
+    padding: 12px 0; 
+}
+
+.enquirybutton[type="submit"] {
+    background-color: #3E2960;
+    color: white;
+    flex: 1;
+}
+
+.enquirybutton[type="reset"] {
+    background-color: #ddd;
+    color: #333;
+    flex: 1;
+}
+
+.enquirybutton[type="submit"]:hover {
+    background-color: #704b91;
+}
+
+.enquirybutton[type="reset"]:hover {
+    background-color: #bbb;
+}
+
+.enquiryinput:invalid:focus {
+    border-color: #e74c3c;
+}
+
+.enquiryinput:valid:focus {
+    border-color: #2ecc71;
+}
+		
 .enquiryform button:hover {
-  background: #704b91;
-  transform: translateY(-2px);
+    background: #704b91;
+    transform: translateY(-2px);
 }
 
 .captcha-group {
@@ -1944,28 +2152,28 @@ nav ul li .dropdown-menu a:hover {
 }
 
 .button-group-enquiry {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px; 
-  margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; 
+    margin-top: 25px;
 }
 
 .button-group-enquiry button {
-  flex: 1; 
-  background-color: #7a3db8; 
-  color: white;
-  border: none;
-  padding: 14px;
-  border-radius: 10px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
+    flex: 1; 
+    background-color: #7a3db8; 
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .button-group-enquiry button:hover {
-  background-color: #9b59b6;
-  transform: translateY(-2px);
+    background-color: #9b59b6;
+    transform: translateY(-2px);
 }
 
 .captcha-img {
@@ -1973,6 +2181,47 @@ nav ul li .dropdown-menu a:hover {
     height: 60px;
     object-fit: cover;
     border: 1px solid #ddd;
+}
+
+@media (max-width: 774px) {
+    .form-fieldset {
+        max-width: 100%; 
+        padding: 1rem;
+    }
+
+    .form-group {
+        max-width: 100%;
+    }
+
+    .enquiryform input[type="text"],
+    .enquiryform input[type="email"],
+    .enquiryform input[type="tel"],
+    .enquiryform select,
+    .enquiryform textarea {
+        width: 100%;
+        box-sizing: border-box;
+        min-width: 0;
+    }
+
+    #detail {
+        padding: 20px 10px;
+    }
+}
+
+@media (max-width: 1150px) {
+     #priority {
+        width: 100%;
+        max-width: 500px;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 553px) {
+    #priority {
+        width: 100%;
+        max-width: 300px;
+        min-width: 0;
+    }
 }
 
 /* Different HTML page styles */
@@ -2347,7 +2596,7 @@ nav ul li .dropdown-menu a:hover {
 }
 
 
-/* Responsive */
+/* Responsive enh page */
 @media (max-width: 768px) {
     .enhancement {
         padding: 30px 15px;
@@ -2390,3 +2639,84 @@ nav ul li .dropdown-menu a:hover {
         margin-top: 20px;
     }
 }
+
+/* Different HTML page styles */
+/* Acknowledgement */
+.acknowledge {
+    background-color: white;
+    padding: 50px;
+    height: auto;
+}
+
+.acknowledge h1 {
+    text-align: center;
+    color: #3E2960;
+}
+
+.acknowledge p {
+    text-align: center;
+    font-size: 18px;
+}
+
+.credits {
+    padding: 20px;
+    margin-top: 30px;
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.credits hr {
+    border: none;
+    border-top: 2px solid #e0e0e0;
+    margin-bottom: 30px;
+}
+
+.credits-box {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    width: 50%;
+    height: 500px;
+    transition: all 0.3s ease;
+}
+
+.credits-box:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    transform: translateY(-5px);
+}
+
+.credits-box h2 {
+    color: #3E2960;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.credits-box ul {
+    list-style-type: disc;
+    padding-left: 50px;
+    padding-right: 10px;
+}
+
+.credits-box ul li {
+    padding-left: 10px;
+    font-size: 1.1rem;
+}
+
+.credits-box a {
+    text-decoration: none;
+    color: #704b91;
+    font-weight: 500;
+}
+
+.credits-box a:hover {
+    text-decoration: underline;
+}
+
