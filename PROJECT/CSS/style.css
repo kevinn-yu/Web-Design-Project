@@ -256,7 +256,7 @@ nav ul li .dropdown-menu a:hover {
     nav ul li {
         display: block;
         text-align: left;
-        padding: 12px 20px;
+        padding: 10px;
     }
 
     #check:checked ~ ul {
@@ -271,81 +271,80 @@ nav ul li .dropdown-menu a:hover {
 }
 
 
-
 /* Background image */
 .background-slider {
-  position: relative;
-  height: 600px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .bg-slides {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .bg-slide {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: blur(4px) brightness(0.8);
-  opacity: 0;
-  transition: opacity 1s;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(4px) brightness(0.8);
+    opacity: 0;
+    transition: opacity 1s;
 }
 
 #bg1:checked ~ .bg-slides .bg-slide1,
 #bg2:checked ~ .bg-slides .bg-slide2,
 #bg3:checked ~ .bg-slides .bg-slide3 {
-  opacity: 1;
-  z-index: 1;
+    opacity: 1;
+    z-index: 1;
 }
 
 @keyframes bgSlider1 {
-  0%, 33% { opacity: 1; }
-  34%, 100% { opacity: 0; }
+    0%, 33% { opacity: 1; }
+    34%, 100% { opacity: 0; }
 }
 @keyframes bgSlider2 {
-  0%, 33% { opacity: 0; }
-  34%, 66% { opacity: 1; }
-  67%, 100% { opacity: 0; }
+    0%, 33% { opacity: 0; }
+    34%, 66% { opacity: 1; }
+    67%, 100% { opacity: 0; }
 }
 @keyframes bgSlider3 {
-  0%, 66% { opacity: 0; }
-  67%, 100% { opacity: 1; }
+    0%, 66% { opacity: 0; }
+    67%, 100% { opacity: 1; }
 }
 
 .bg-slide1 {
-  animation: bgSlider1 9s infinite;
+    animation: bgSlider1 9s infinite;
 }
 .bg-slide2 {
-  animation: bgSlider2 9s infinite;
+    animation: bgSlider2 9s infinite;
 }
 .bg-slide3 {
-  animation: bgSlider3 9s infinite;
+    animation: bgSlider3 9s infinite;
 }
 
 .bg-content {
-  position: relative;
-  z-index: 2;
-  color: #fff;
-  text-align: center;
-  width: 100%;
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+    width: 100%;
 }
 
 .bg-content h1 {
-  font-size: 48px;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    font-size: 48px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
 }
 
 .bg-content p {
-  font-size: 24px;
-  text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+    font-size: 24px;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
 }
 
 /* About us */
@@ -437,55 +436,55 @@ nav ul li .dropdown-menu a:hover {
 }
 
 .css-slider {
-  position: relative;
-  width: 1000px;
-  margin: 0 auto;
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
 }
 
 .css-slider input[type="radio"] {
-  display: none;
+    display: none;
 }
 
 .css-slider .slides {
-  position: relative;
-  height: 60vw;
-  max-height: 500px;
-  min-height: 250px;
+    position: relative;
+    height: 60vw;
+    max-height: 500px;
+    min-height: 250px;
 }
 
 .css-slider .slide {
-  position: absolute;
-  left: 0; top: 0;
-  width: 100%;
-  height: 450px;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 0.5s;
-  border-radius: 10px;
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s;
+    border-radius: 10px;
 }
 
 #slide1:checked ~ .slides .slide1,
 #slide2:checked ~ .slides .slide2,
 #slide3:checked ~ .slides .slide3,
 #slide4:checked ~ .slides .slide4 {
-  opacity: 1;
-  z-index: 1;
+    opacity: 1;
+    z-index: 1;
 }
 
 .css-slider .slider-nav {
-  text-align: center;
-  margin-top: 10px;
+    text-align: center;
+    margin-top: 10px;
 }
 
 .css-slider .slider-nav label {
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  background: #fff;
-  border-radius: 50%;
-  margin: 0 5px;
-  cursor: pointer;
-  border: 2px solid #704b91;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    border: 2px solid #704b91;
 }
 
 /* Responsive slider */
@@ -515,17 +514,20 @@ nav ul li .dropdown-menu a:hover {
     text-align: center;
     height: auto;
 }
+
 .latest-news h2 {
     font-size: 32px;
     margin-bottom: 30px;
     color: #3E2960;
 }
+
 .news-container {
     display: flex;
     justify-content: center;
     gap: 32px;
     flex-wrap: wrap;
 }
+
 .news-item {
     background: #fff;
     border-radius: 16px;
@@ -535,10 +537,12 @@ nav ul li .dropdown-menu a:hover {
     text-align: left;
     transition: transform 0.2s;
 }
+
 .news-item:hover {
     transform: translateY(-8px) scale(1.03);
     box-shadow: 0 6px 24px rgba(62,41,96,0.15);
 }
+
 .news-item img {
     width: 100%;
     height: 180px;
@@ -551,6 +555,7 @@ nav ul li .dropdown-menu a:hover {
     color: #704b91;
     margin-bottom: 10px;
 }
+
 .news-item p {
     font-size: 16px;
     color: #444;
@@ -922,23 +927,23 @@ nav ul li .dropdown-menu a:hover {
 /* Different HTML page styles */
 /* User Profile Page */
 .button-group {
-  text-align: center;
-  margin-top: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    text-align: center;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .email-button,
 .back-button {
-  background-color: #8e24aa;
-  color: white;
-  padding: 0.7rem 1.5rem;
-  text-decoration: none;
-  border-radius: 30px;
-  margin: 0.5rem;
-  transition: all 0.3s;
-  font-weight: bold;
+    background-color: #8e24aa;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    text-decoration: none;
+    border-radius: 30px;
+    margin: 0.5rem;
+    transition: all 0.3s;
+    font-weight: bold;
 }
 
 .email-button:hover,
@@ -1727,14 +1732,14 @@ nav ul li .dropdown-menu a:hover {
     }
     
     .workshop-front .length {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 2px 0;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 2px 0;
 }
 
     .workshop-front .duration  {
-    font-size: 1rem;
-    opacity: 0.9;
+        font-size: 1rem;
+        opacity: 0.9;
 }
 }
 
@@ -1758,14 +1763,14 @@ nav ul li .dropdown-menu a:hover {
     }
     
     .workshop-front .length {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 2px 0;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 2px 0;
 }
 
     .workshop-front .duration  {
-    font-size: 1rem;
-    opacity: 0.9;
+        font-size: 1rem;
+        opacity: 0.9;
 }
 }
 
@@ -1975,19 +1980,6 @@ nav ul li .dropdown-menu a:hover {
     }
 }
 
-/* Responsive Design for different sizes*/
-
-
-@media (max-width: 768px) {
-    .navbar {
-        display: none;
-    }
-    
-    .product-grid {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    }
-}
-
 /* Different HTML page styles */
 /* Enquiry Page */
 
@@ -2078,8 +2070,8 @@ nav ul li .dropdown-menu a:hover {
 .enquiryform input[type="tel"]:focus,
 .enquiryform select:focus,
 .enquiryform textarea:focus {
-  border-color: #5e2b97;
-  box-shadow: 0 0 5px rgba(94, 43, 151, 0.5);
+    border-color: #5e2b97;
+    box-shadow: 0 0 5px rgba(94, 43, 151, 0.5);
 }
 
 #priority {
@@ -2676,7 +2668,7 @@ nav ul li .dropdown-menu a:hover {
     border-radius: 8px;
     margin-bottom: 30px;
     width: 50%;
-    height: 500px;
+    height: 600px;
     transition: all 0.3s ease;
 }
 
