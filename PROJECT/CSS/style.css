@@ -310,6 +310,7 @@ nav ul li .dropdown-menu a:hover {
     z-index: 1;
 }
 
+
 @keyframes bgSlider1 {
     0%, 33% { opacity: 1; }
     34%, 100% { opacity: 0; }
@@ -345,11 +346,69 @@ nav ul li .dropdown-menu a:hover {
 .bg-content h1 {
     font-size: 48px;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    animation: textAnimation 2s ease-in-out forwards;
+    opacity: 0;
 }
 
 .bg-content p {
     font-size: 24px;
     text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+    animation: textAnimation 2s ease-in-out forwards;
+    opacity: 0;
+}
+
+
+@keyframes textAnimation {
+    from { 
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.rf-animation1, .rf-animation2, .rf-animation3, .rf-animation4, .rf-animation5,
+.rf-animation6, .rf-animation7, .rf-animation8, .rf-animation9, .rf-animation10 {
+    display: inline-block;
+    animation: bounce-text-index 0.8s ease-out both;
+    animation-delay: 2s;
+}
+
+.rf-animation1 { animation-delay: 0.5s; }
+.rf-animation2 { animation-delay: 1s; }
+.rf-animation3 { animation-delay: 1.5s; }
+.rf-animation4 { animation-delay: 2s; }
+.rf-animation5 { animation-delay: 2.5s; }
+.rf-animation6 { animation-delay: 3s; }
+.rf-animation7 { animation-delay: 3.5s; }
+.rf-animation8 { animation-delay: 4.0s; }
+.rf-animation9 { animation-delay: 4.5s; }
+.rf-animation10 { animation-delay: 5s; }
+
+@keyframes bounce-text-index {
+    0% {
+        opacity: 0;
+        transform: translateY(-60px) 
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0px)
+    }
+    70% {
+        transform: translateY(-10px) 
+    }
+    80% {
+        transform: translateY(2px);
+    }
+    90% {
+        transform: translateY(-2px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px)
+    }
 }
 
 /* About us */
@@ -1434,6 +1493,19 @@ nav ul li .dropdown-menu a:hover {
 .main-workshop {
     flex: 1;
     padding-right: 2rem;
+    animation: workshopanimation 1s ease-in-out forwards;
+    opacity: 0;
+}
+
+@keyframes workshopanimation {
+    from { 
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .workshop h1 {
@@ -1693,6 +1765,19 @@ nav ul li .dropdown-menu a:hover {
 .main-promotion {
     flex: 1;
     padding-right: 2rem;
+    animation: promotionanimation 2s ease-in-out forwards;
+    opacity: 0;
+}
+
+@keyframes promotionanimation {
+    from { 
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .promotion h1 {
