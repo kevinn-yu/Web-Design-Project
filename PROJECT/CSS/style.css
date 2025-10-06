@@ -2026,18 +2026,23 @@ nav ul li .dropdown-menu a:hover {
 }
 
 /* Different HTML page styles */
+.membership-reg {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); 
+    padding: 45px;
+}
+
 .membership-reg h1 {
     text-align: center;
     color: #3E2960;
     font-size: 2.2rem;
-    margin-top: 50px;
     margin-bottom: 30px;
     font-weight: 700;
 }
 
 .membership-reg form {
     max-width: 700px;
-    margin: 0 auto 80px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: #fff;
     padding: 40px 50px;
     border-radius: 12px;
@@ -2086,15 +2091,28 @@ nav ul li .dropdown-menu a:hover {
 /* Different HTML page styles */
 /* Enquiry Page */
 
+
 .enquiryform {
-    background: white;
+    background:linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 40px;
 }
 
 #detail {
     padding: 40px;
 }
 
-.enquiryform form h1 {
+#enquiry-detail {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1100px;
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    font-family: 'Poppins', sans-serif;
+}
+
+.enquiryform h1 {
     color: #3e2960 ;
     font-size: 2rem;
     font-weight: 600;
@@ -2102,7 +2120,7 @@ nav ul li .dropdown-menu a:hover {
     text-align: center;
 }
 
-.enquiryform form p {
+.enquiryform p {
     color: black;
     font-size: 0.95rem;
     line-height: 1.6;
