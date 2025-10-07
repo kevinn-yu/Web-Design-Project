@@ -1108,21 +1108,14 @@ nav ul li .dropdown-menu a:hover {
 /* Different HTML page styles */
 /* Product Selection Page */
 .main-content {
+    display: flex;
+    gap: 10px;
     padding: 30px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.main-content::after {
-    content: "";
-    display: table;
-    clear: both;
 }
 
 /* Aside for product*/
 .sidebar {
-    width: 30%;
-    float: right;
+    flex: 30%;
     background-color: #f7f7f7;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
@@ -1221,10 +1214,9 @@ nav ul li .dropdown-menu a:hover {
 
 /* Product selection */
 .product-section {
-    float: left;
-    width: 68%;
     margin-right: 2%;
     box-sizing: border-box;
+    flex: 68%
 }
 
 .section-header {
@@ -1424,55 +1416,43 @@ nav ul li .dropdown-menu a:hover {
 /* Workshop Page */
 .workshop {
     display: flex;
-    padding: 3rem 5%;
+    padding: 60px 70px;
     background-color: #3e2960;
-    margin: 2rem 2.5%;
+    margin: 30px;
     border-radius: 8px;
     align-items: center;
 }
 
 .main-workshop {
     flex: 1;
-    padding-right: 2rem;
+    padding-right: 50px;
     animation: workshopanimation 1s ease-in-out forwards;
     opacity: 0;
 }
 
-@keyframes workshopanimation {
-    from { 
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to { 
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 .workshop h1 {
     color: white;
-    margin-bottom: 1rem;
-    font: normal bold 2.2rem/30px arial, "sans-seriff";
+    margin-bottom: 20px;
+    font: normal bold 30px arial, "sans-seriff";
 }
 
 .workshop p {
-    margin-bottom: 1.5rem;
+    margin-bottom: 30px;
     color: white;
 }
 
-.workshop a {
+.workshop button {
     background-color: #704b91;
     color: white;
     border: none;
-    padding: 0.5rem 1.2rem;
-    text-decoration: none;
+    padding: 10px 20px;
     border-radius: 4px;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: all 0.3s
 }
 
-.workshop a:hover {
+.workshop button:hover {
     background-color: #8660a7;
 }
 
@@ -1487,9 +1467,26 @@ nav ul li .dropdown-menu a:hover {
 
 .workshop-image figcaption {
     text-align: center;
-    margin-top: 1em;
+    margin-top: 20px;
     color: white;
     font-style: italic;
+}
+
+@keyframes workshopanimation {
+    from { 
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.workshop-content {
+    display: flex;
+    gap: 10px;
+    padding: 30px;
 }
 
 .workshop-grid {
@@ -1497,9 +1494,7 @@ nav ul li .dropdown-menu a:hover {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
     margin-bottom: 40px;
-    width: 68%;
-    float: left;
-
+    flex: 68%;
 }
 
 .workshop-item {
@@ -1617,8 +1612,7 @@ nav ul li .dropdown-menu a:hover {
 }
 
 .workshopsidebar {
-    width: 30%;
-    float: right;
+    flex: 30%;
     background-color: #f7f7f7;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
@@ -1708,6 +1702,11 @@ nav ul li .dropdown-menu a:hover {
 }
 
 @media (max-width: 768px) {
+    .workshop-content {
+        display: flex;
+        flex-direction: column;
+    }
+
     .workshop-grid {
         grid-template-columns: 4fr;
         gap: 20px;
@@ -1864,7 +1863,7 @@ nav ul li .dropdown-menu a:hover {
     background-color: #704b91;
 }
 
-.current-promotions {
+.promotion-information {
     padding: 3rem 5%;
     background-color: rgb(246, 243, 243);
     margin: 2rem 5%;
@@ -1873,7 +1872,7 @@ nav ul li .dropdown-menu a:hover {
     gap: 1rem;
 }
 
-.current-promotions h2 {
+.promotion-information h2 {
     margin-bottom: 2rem;
     color: #3e2960;
 }
