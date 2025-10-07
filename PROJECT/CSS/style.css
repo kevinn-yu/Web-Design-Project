@@ -33,17 +33,14 @@ body {
 .logo {
     color: white;
     font-size: 21px;
-    line-height: 80px;
-    padding-left: 0px;
-    margin: 40px;
+    margin-left: 40px;
     font-weight: bold;
     width: auto;
-    display: block;
 }
 
 .logo2 img {
     background: #fff;
-    border-radius: 50%;
+    border-radius: 100%;
     padding: 3px;
     box-shadow: 0 2px 8px rgba(62,41,96,0.15);
     transition: box-shadow 0.3s, transform 0.3s;
@@ -54,20 +51,16 @@ body {
 
 nav ul {
     list-style: none;
-    padding: 0;
-    float: none;
-    margin-right: 20px;
+    margin-right: 40px;
     gap: 60px;
     align-items: center;
     display: flex;
-    padding-right: 20px
 }
 
 nav ul li {
-    text-decoration: none;
     font-size: 15px;
     text-transform: uppercase;
-    display: inline-block;
+
 }
 
 /* Dropdown menu */
@@ -280,7 +273,6 @@ nav ul li .dropdown-menu a:hover {
 .background-slider {
     position: relative;
     height: 600px;
-    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -288,7 +280,6 @@ nav ul li .dropdown-menu a:hover {
 
 .bg-slides {
     position: absolute;
-    inset: 0;
     width: 100%;
     height: 100%;
 }
@@ -310,6 +301,15 @@ nav ul li .dropdown-menu a:hover {
     z-index: 1;
 }
 
+.bg-slide1 {
+    animation: bgSlider1 9s infinite;
+}
+.bg-slide2 {
+    animation: bgSlider2 9s infinite;
+}
+.bg-slide3 {
+    animation: bgSlider3 9s infinite;
+}
 
 @keyframes bgSlider1 {
     0%, 33% { opacity: 1; }
@@ -323,16 +323,6 @@ nav ul li .dropdown-menu a:hover {
 @keyframes bgSlider3 {
     0%, 66% { opacity: 0; }
     67%, 100% { opacity: 1; }
-}
-
-.bg-slide1 {
-    animation: bgSlider1 9s infinite;
-}
-.bg-slide2 {
-    animation: bgSlider2 9s infinite;
-}
-.bg-slide3 {
-    animation: bgSlider3 9s infinite;
 }
 
 .bg-content {
@@ -413,7 +403,7 @@ nav ul li .dropdown-menu a:hover {
 
 /* About us */
 .about-us {
-    padding: 30px 20px;
+    padding: 30px;
     margin-bottom: 20px;
     text-align: center;
     background-color: white;
@@ -431,7 +421,6 @@ nav ul li .dropdown-menu a:hover {
     font-size: 18px;
     max-width: 1000px;
     margin: 0 auto;
-    line-height: 1.6;
     text-align: justify;
 }
 
@@ -444,25 +433,6 @@ nav ul li .dropdown-menu a:hover {
     margin: 20px auto 0;
 }
 
-.instagram-link {
-    margin-top: 60px;
-    padding: 10px 20px;
-    background-color: #704b91;
-    color: white;
-    text-decoration: none;
-    font-family: poppins, sans-serif;
-    font-weight: bold;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-    cursor: pointer;
-
-}
-
-.instagram-link:hover {
-    background-color: rgba(254, 193, 200, 0.845);
-    color: black;
-    text-decoration: none;
-}
 
 @media (max-width: 730px) {
     .about-us {
@@ -511,7 +481,7 @@ nav ul li .dropdown-menu a:hover {
 
 .css-slider .slides {
     position: relative;
-    height: 60vw;
+    height: 500px;
     max-height: 500px;
     min-height: 250px;
 }
@@ -519,6 +489,12 @@ nav ul li .dropdown-menu a:hover {
 .css-slider .slide {
     position: absolute;
     left: 0; top: 0;
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s;
+    border-radius: 10px;
     width: 100%;
     height: 450px;
     object-fit: cover;
@@ -548,7 +524,7 @@ nav ul li .dropdown-menu a:hover {
     border-radius: 50%;
     margin: 0 5px;
     cursor: pointer;
-    border: 2px solid #704b91;
+    border: 2px;
 }
 
 /* Responsive slider */
@@ -573,8 +549,8 @@ nav ul li .dropdown-menu a:hover {
 
 /* Latest news section */
 .latest-news {
-    padding: 60px 20px;
-    background: #f7f7f7;
+    padding: 50px;
+    background: white;
     text-align: center;
     height: auto;
 }
@@ -635,7 +611,6 @@ nav ul li .dropdown-menu a:hover {
         width: 100%;
         max-width: 600px;
     }
-    
 }
 
 
@@ -657,15 +632,12 @@ nav ul li .dropdown-menu a:hover {
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
-}
-
-.footer-container > div {
     padding: 20px;
 }
 
+
 .other .box {
     list-style: none;
-    padding: 0;
     margin-top: 5px;
     display: flex;
     flex-direction: column;
@@ -677,40 +649,12 @@ nav ul li .dropdown-menu a:hover {
     color: white;
 }
 
-.aboutus .box {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
-    gap: 15px;
-}
-
-.aboutus p {
-    margin-top: 10px;
-    text-align: justify;
-}
-
-.aboutus .box li a {
-    color: #fff;
-    font-size: 24px;
-    text-align: justify ;
-}
-
-.aboutus .box img {
-    width: 30px;
-    height: 30px;
-    object-fit: contain;
-    display: inline-block;
-    vertical-align: middle;
-}
-
 .quicklinks li, .contact li {
     margin-bottom: 20px;
 }
 
 .quicklinks ul, .contact ul {
     list-style: none;
-    padding: 0;
     margin-top: 5px;
 }
 
@@ -722,9 +666,6 @@ nav ul li .dropdown-menu a:hover {
 .contact .box  img {
     width: 30px;
     height: 30px;
-    object-fit: contain;
-    display: inline-block;
-    vertical-align: middle;
 }
 
 .contact .box a {
@@ -2175,12 +2116,11 @@ nav ul li .dropdown-menu a:hover {
 
 /* Different HTML page styles */
 /* Enquiry Page */
-
-
 .enquiryform {
     background:linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     padding: 40px;
 }
+
 
 #detail {
     padding: 40px;
@@ -2203,6 +2143,8 @@ nav ul li .dropdown-menu a:hover {
     font-weight: 600;
     margin-bottom: 1.5rem;
     text-align: center;
+	animation: fadeinenquiry 1s ease-in-out forwards;
+    opacity: 0; 
 }
 
 .enquiryform p {
@@ -2211,6 +2153,20 @@ nav ul li .dropdown-menu a:hover {
     line-height: 1.6;
     margin-bottom: 25px;
     text-align: center;
+	animation: fadeinenquiry 1s ease-in-out 0.3s forwards;
+    opacity: 0; 
+}
+
+
+@keyframes fadeinenquiry {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .form-fieldset {
@@ -2339,13 +2295,6 @@ nav ul li .dropdown-menu a:hover {
     transform: translateY(-2px);
 }
 
-.captcha-group {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-}
-
 .button-group-enquiry {
     display: flex;
     justify-content: space-between;
@@ -2371,11 +2320,107 @@ nav ul li .dropdown-menu a:hover {
     transform: translateY(-2px);
 }
 
+.captcha-group {
+    position: relative;
+    animation: captchaFloat 3s ease-in-out infinite;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
 .captcha-img {
+    transition: transform 0.3s ease;
+    border: 2px solid #eee;
     width: 120px;
     height: 60px;
     object-fit: cover;
     border: 1px solid #ddd;
+}
+
+.captcha-group:hover .captcha-img {
+    transform: scale(1.05) rotate(1deg);
+    border-color: #704b91;
+}
+
+@keyframes captchaFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+.radio-group, .checkbox-group {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+
+.radio-label, .checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.radio-label input[type="radio"],
+.checkbox-label input[type="checkbox"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #704b91;
+    border-radius: 50%; 
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.checkbox-label input[type="checkbox"] {
+    border-radius: 4px; 
+}
+
+.radio-label input[type="radio"]:checked {
+    background: #704b91;
+    border-color: #704b91;
+    animation: pulse 0.3s ease;
+}
+
+.checkbox-label input[type="checkbox"]:checked {
+    background: #704b91;
+    border-color: #704b91;
+    animation: pulse 0.3s ease;
+}
+
+.radio-label input[type="radio"]:checked::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+.checkbox-label input[type="checkbox"]:checked::after {
+    content: '✓';
+    position: absolute;
+    color: white;
+    font-size: 12px;
+    top: 1px;
+    left: 3px;
+}
+
+.radio-label input:checked + span,
+.checkbox-label input:checked + span {
+    color: #3e2960;
+    font-weight: 500;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
 }
 
 @media (max-width: 774px) {
@@ -2451,6 +2496,19 @@ nav ul li .dropdown-menu a:hover {
     margin-top: 30px;
     font-weight: 700;
     text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	animation: fadeinlogin 1s ease-in-out 0.3s forwards; 
+    opacity: 0;
+}
+
+@keyframes fadeinlogin {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .login-form {
