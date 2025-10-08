@@ -1817,7 +1817,7 @@ nav ul li .dropdown-menu a:hover {
     background-color: #704b91;
     color: white;
     border: none;
-    padding: 0.8rem 1.5rem;
+    padding: 10px 20px;
     border-radius: 4px;
     font-weight: bold;
     cursor: pointer;
