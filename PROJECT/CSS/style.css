@@ -590,6 +590,7 @@ nav ul li .dropdown-menu a:hover {
     border-radius: 12px;
     margin-bottom: 16px;
 }
+
 .news-item h3 {
     font-size: 22px;
     color: #704b91;
@@ -732,7 +733,7 @@ nav ul li .dropdown-menu a:hover {
     display:flex;
     justify-content: center;
     align-items: flex-start;
-    flex-wrap: nowrap; 
+    flex-wrap: wrap; 
     gap: 30px; 
 }
 
@@ -786,6 +787,18 @@ nav ul li .dropdown-menu a:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
     border-color: #e2e8f0;
+}
+
+@media (max-width: 888px) {
+    .profile-card {
+        width: 100%;
+    }
+
+    .profile-image {
+        height: 300px;
+        object-fit: contain;
+        width: 80%
+    }
 }
 
 /* Button styles */
@@ -1538,8 +1551,7 @@ nav ul li .dropdown-menu a:hover {
 }
 
 .workshop-front figure {
-    margin: 0 0 15px 0;
-}
+    margin-bottom: 15px;}
 
 .workshop-front img {
     width: 80px;
@@ -1550,25 +1562,25 @@ nav ul li .dropdown-menu a:hover {
 }
 
 .workshop-front figcaption {
-    font-size: 0.9rem;
+    font-size: 16px;
     margin-top: 8px;
     opacity: 0.9;
 }
 
 .workshop-front h2 {
-    font-size: 1.5rem;
+    font-size: 25px;
     margin-bottom: 15px;
     text-align: center;
 }
 
 .workshop-front .length {
-    font-size: 2rem;
+    font-size: 25px;
     font-weight: bold;
     margin: 10px 0;
 }
 
 .workshop-front .totalclass  {
-    font-size: 1rem;
+    font-size: 16px;
     opacity: 0.9;
 }
 
@@ -1584,7 +1596,7 @@ nav ul li .dropdown-menu a:hover {
 
 .workshop-back h3 {
     color: #704b91;
-    font-size: 1.3rem;
+    font-size: 20px;
     margin-bottom: 15px;
     text-align: center;
 }
@@ -1604,7 +1616,7 @@ nav ul li .dropdown-menu a:hover {
 .workshop-specs dd {
     margin: 0 0 10px 20px;
     color: #666;
-    font-size: 0.9rem;
+    font-size: 16px;
 }
 
 .workshop-specs dd span {
