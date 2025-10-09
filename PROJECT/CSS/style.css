@@ -2003,7 +2003,7 @@ nav ul li .dropdown-menu a:hover {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-    margin-top: 20px;
+    margin: 10px 0;
 }
 
 .workshop-radio, .workshop-check label {
