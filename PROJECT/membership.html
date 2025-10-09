@@ -59,11 +59,14 @@
         </nav>
     </header>
 
+    <main class="membership-reg-container">
+        <section class="membership-text">
+        <h1>Membership Registration</h1>
+        <p>Fill out the form below to reserve your spot.</p>
+        </section>
 
     <section class="membership-reg">
-    <h1>Member Registration Form</h1>
-
-    <form action="mailto:101229385@students.swinburne.edu.my" method="POST" enctype="text/plain">
+    <form id="membership-form" action="mailto:101229385@students.swinburne.edu.my" method="POST" enctype="text/plain">
 
         <fieldset>
         <legend>Membership Details</legend>
@@ -103,13 +106,14 @@
 
         </fieldset>
 
-        <div class="cta">
-        <button type="submit" class="order-button">Submit Registration</button>
-        <button type="reset" class="order-button">Reset Registration</button>
+        <div class="button-group-enquiry">        
+            <button type="submit">SEND ENQUIRY</button>
+            <button type="reset" class="clear-btn">Reset Form</button>
         </div>
 
     </form>
     </section>
+    </main>
 
     <!-- Footer  -->
     <footer class="footer-content">

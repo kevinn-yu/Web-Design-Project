@@ -651,7 +651,7 @@ nav ul li .dropdown-menu a:hover {
 }
 
 .quicklinks li, .contact li {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .quicklinks ul, .contact ul {
@@ -1511,7 +1511,7 @@ nav ul li .dropdown-menu a:hover {
 }
 
 .workshop-item {
-    height: 350px;
+    height: 500px;
     perspective: 1000px;
     border-radius: 12px;
 }
@@ -1554,11 +1554,9 @@ nav ul li .dropdown-menu a:hover {
     margin-bottom: 15px;}
 
 .workshop-front img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid white;
+    width: 450px;
+    height: 400px;
+    object-fit: contain;
 }
 
 .workshop-front figcaption {
@@ -1845,180 +1843,160 @@ nav ul li .dropdown-menu a:hover {
 }
 
 .promotion-features {
-    padding: 3rem 5%;
-}
-
-.promotion-features h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #3e2960;
+    display: flex;
+    padding: 30px;
+    gap: 30px;
 }
 
 .feature-cards {
-    display: flex;
-    gap: 2rem;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 70%;
+    margin: 30px;
 }
 
 .card {
-    background-color: rgb(255, 248, 248);
-    padding: 1.5rem;
-    border-radius: 8px;
-    flex: 1;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
-.card h3 {
-    color: #3e2960;
-    margin-bottom: 1rem;
-}
-
-.card p {
-    margin-bottom: 1.5rem;
-    color: #7f8c8d;
-}
-
-.card button {
-    background-color: #3e2960;
-    color: white;
-    border: none;
-    padding: 0.6rem 1.2rem;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.card button:hover {
-    background-color: #704b91;
-}
-
-.promotion-information {
-    padding: 3rem 5%;
-    background-color: rgb(246, 243, 243);
-    margin: 2rem 5%;
-    border-radius: 8px;
-}
-
-.promotion-information h2 {
-    margin-bottom: 2rem;
-    color: #3e2960;
-}
-
-.promo-content {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.promo-content ol {
-    flex: 2;
-    padding-left: 1.5rem;
-}
-
-.promo-content ol li {
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-    border-bottom: 1px solid #f1f1f1;
-}
-
-#promo-aside {
-    background-color: #f0ffff ;
-    padding: 1.5rem;
-    width: 30%;
-    border-radius: 8px;
-}
-
-#promo-aside h3 {
-    color: #3e2960;
-    margin-bottom: 1rem;
-}
-
-#promo-categories dl {
-    margin-top: 1rem;
-}
-
-#promo-categories dt {
-    font-weight: bold;
-    margin-top: 1rem;
-    color: #2c3e50;
-}
-
-#promo-categories dd {
-    margin-left: 1rem;
-    color: #7f8c8d;
-}
-
-.promotion-table {
+.card img {
     width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 25px;
+    text-align: left;
+}
+
+.card-content h3 {
+    font-size: 20px;
+    color: #3e2960;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.card-content p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.promotion-aside {
+    flex: 30%;
+    background-color: #f7f7f7;
     border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     padding: 20px;
-    margin-top: 20px;
+    height: fit-content;
+    border: 2px solid #e0d2ec;
+    box-sizing: border-box;
 }
 
-.promotion-table p {
-    padding-bottom: 20px;
+.promotion-aside h3, .promotion-aside h4 {
+    color: #3e2960;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #704b91;
 }
 
-.promotion-table table {
+.promotion-aside dl {
+    margin-bottom: 25px;
+}
+
+.promotion-aside dt {
+    font-weight: bold;
+    color: #704b91;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.promotion-aside dd {
+    margin: 0 0 10px 15px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.promotion-aside table {
     width: 100%;
     border-collapse: collapse;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    overflow: hidden;
+    margin-bottom: 20px;
 }
 
-.promotion-table th {
+.promotion-aside th {
     background-color: #704b91;
     color: white;
     font-weight: bold;
-    padding: 15px 10px;
+    padding: 10px 8px;
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
-.promotion-table td {
+.promotion-aside td {
     background-color: white;
     color: #333;
-    padding: 12px 10px;
+    padding: 8px;
     text-align: center;
     border: 1px solid #e0e0e0;
+    font-size: 0.85rem;
+}
+
+.promotion-aside .register-btn {
+    background: #704b91;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.promotion-aside .register-btn:hover {
+    background: #3e2960;
 }
 
 /* Responsive Design */
-@media (max-width: 1087px) {
-    .promo-content {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column
+@media (max-width: 890px) {
+    .feature-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 
-    #promo-aside {
-        width: 90%
+    .card img {
+        object-fit: contain;
     }
-}
-
-@media (max-width: 768px) {
     
-    .main-promotion {
-        padding-right: 0;
-        margin-bottom: 2rem;
-    }
-
-    .promotion-table {
-        padding: 0px;
+    .promotion-features {
+        padding: 40px 20px;
     }
 }
 
-@media (max-width: 690px) {
-    .promotion h1 {
-        font-size: 1.5rem;
+@media (max-width: 1087px) {
+    .promotion-features {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column
     }
 
+    .feature-cards {
+        width: 100%;
+        margin-left: 0px;
+    }
 }
 
 /* Different HTML page styles */
@@ -2155,9 +2133,36 @@ nav ul li .dropdown-menu a:hover {
 }
 
 /* Different HTML page styles */
-.membership-reg {
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); 
-    padding: 45px;
+.membership-reg-container {
+   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); 
+   padding-bottom: 30px;
+}
+
+.membership-text {
+    text-align: center;
+    padding: 60px 20px 30px;
+}
+
+.membership-text h1 {
+    font-size: 2.2rem;
+    color: #3E2960;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.membership-text p {
+    color: #704b91;
+    font-size: 1.1rem;
+}
+
+#membership-form {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1100px;
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
 .membership-reg h1 {
