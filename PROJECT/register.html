@@ -164,6 +164,49 @@
                 placeholder="e.g. 93000">
             </fieldset>
 
+            <!-- ========== Account & Preferences (radio, checkbox) ========== -->
+            <fieldset>
+                <legend>Account & Preferences</legend>
+
+                <!-- Login ID -->
+                <label for="loginID">Login ID *</label>
+                <input
+                id="loginID"
+                name="loginID"
+                type="text"
+                maxlength="10"
+                pattern="^[A-Za-z0-9]{4,10}$"
+                title="4–10 letters or numbers"
+                required
+                placeholder="choose a login id">
+
+                <!-- Password -->
+                <label for="password">Password *</label>
+                <input
+                id="password"
+                name="password"
+                type="password"
+                minlength="8"
+                maxlength="25"
+                required
+                placeholder="min 8 characters">
+
+                <!-- Radio (membership type) -->
+                <p>Membership type *</p>
+                <div class="workshop-radio">
+                <label><input type="radio" name="membershipType" value="standard" required> Standard</label>
+                <label><input type="radio" name="membershipType" value="premium"> Premium</label>
+                </div>
+
+                <!-- Checkbox group (interests) -> server receives multiple values as interests[] -->
+                <p>Interests (choose any)</p>
+                <div class="workshop-check">
+                <label><input type="checkbox" name="interests[]" value="products"> Products</label>
+                <label><input type="checkbox" name="interests[]" value="workshops"> Workshops</label>
+                <label><input type="checkbox" name="interests[]" value="promotions"> Promotions</label>
+                </div>
+            </fieldset>
+
 
             <!-- Contact Info -->
             <fieldset>
