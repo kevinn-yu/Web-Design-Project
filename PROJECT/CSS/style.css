@@ -1839,7 +1839,7 @@ nav ul li .dropdown-menu a:hover {
 
 .promotion-image figcaption {
     text-align: center;
-    margin-top: 1em;
+    margin-top: 20px;
     color: white;
     font-style: italic;
 }
@@ -2049,7 +2049,7 @@ nav ul li .dropdown-menu a:hover {
 #worksho_details {
     margin-left: auto;
     margin-right: auto;
-    max-width: 900px;
+    max-width: 1100px;
     background-color: #fff;
     padding: 30px 40px;
     border-radius: 12px;
@@ -2219,14 +2219,33 @@ nav ul li .dropdown-menu a:hover {
 
 /* Different HTML page styles */
 /* Enquiry Page */
-.enquiryform {
-    background:linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    padding: 40px;
+.enquiry-reg-container {
+   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); 
+   padding-bottom: 30px;
 }
+
+.enquiry-reg {
+    text-align: center;
+    padding: 60px 20px 30px;
+}
+
+.enquiry-reg h1 {
+    font-size: 2.2rem;
+    color: #3E2960;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.enquiry-reg p {
+    color: #704b91;
+    font-size: 1.1rem;
+}
+
 
 #detail {
     padding: 40px;
 }
+
 
 #enquiry-detail {
     margin-left: auto;
@@ -2271,19 +2290,17 @@ nav ul li .dropdown-menu a:hover {
 }
 
 .form-fieldset {
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
     border: 2px solid #704b91;
     border-radius: 8px;
-    padding: 1.7rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 30px;
+    padding: 20px 25px;
 }
 
 .form-fieldset legend {
     font-weight: bold;
     color: #3E2960;
-    padding: 0 10px;
+    font-size: 1.2rem;
+    padding: 0 8px;
 }
 
 .form-group {
