@@ -1446,7 +1446,7 @@ nav ul li .dropdown-menu a:hover {
 .workshop h1 {
     color: white;
     margin-bottom: 20px;
-    font: normal bold 30px arial, sans-seriff;
+    font: normal bold 30px arial, sans-serif;
 }
 
 .workshop p {
@@ -1498,8 +1498,8 @@ nav ul li .dropdown-menu a:hover {
 
 .workshop-content {
     display: flex;
-    gap: 10px;
     padding: 30px;
+    gap: 30px;
 }
 
 .workshop-grid {
@@ -1511,7 +1511,7 @@ nav ul li .dropdown-menu a:hover {
 }
 
 .workshop-item {
-    height: 500px;
+    height: 450px;
     perspective: 1000px;
     border-radius: 12px;
 }
@@ -1537,8 +1537,9 @@ nav ul li .dropdown-menu a:hover {
     backface-visibility: hidden;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    padding: 20px;
+    padding: 0;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 .workshop-front {
@@ -1550,43 +1551,43 @@ nav ul li .dropdown-menu a:hover {
     align-items: center;
 }
 
-.workshop-front figure {
-    margin-bottom: 15px;}
-
 .workshop-front img {
-    width: 450px;
-    height: 400px;
-    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+}
+
+.workshop-front figure {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    position: relative;
 }
 
 .workshop-front figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
     font-size: 16px;
-    margin-top: 8px;
-    opacity: 0.9;
-}
-
-.workshop-front h2 {
-    font-size: 25px;
-    margin-bottom: 15px;
+    color: white;
     text-align: center;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    margin: 0;
+    border-radius: 0 0 12px 12px;
 }
 
-.workshop-front .length {
-    font-size: 25px;
-    font-weight: bold;
-    margin: 10px 0;
-}
-
-.workshop-front .totalclass  {
-    font-size: 16px;
-    opacity: 0.9;
-}
 
 .workshop-back {
     background: white;
     color: #333;
     transform: rotateY(180deg);
     display: flex;
+    padding: 50px;
     flex-direction: column;
     justify-content: space-between;
     border: 2px solid #704b91;
@@ -1657,37 +1658,14 @@ nav ul li .dropdown-menu a:hover {
     color: white;
 }
 
-.sidebar-table-workshop {
-    border-radius: 8px;
-    padding: 20px;
-    text-align: center;
+.membership-benefits h4 {
+    color: #3e2960;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #704b91;
 }
 
-.sidebar-table-workshop table {
-    width: 100%;
-    border-collapse: collapse;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    border-radius: 8px;
-}
 
-.sidebar-table-workshop th {
-    background-color: #704b91;
-    color: white;
-    font-weight: bold;
-    padding: 15px 10px;
-    font-size: 16px;
-}
-
-.sidebar-table-workshop td {
-    background-color: white;
-    color: #333;
-    padding: 12px 10px;
-    border: 1px solid #e0e0e0;
-}
-
-.sidebar-table-workshop tr:hover td {
-    background-color: #f8f9fa;
-}
 
 .register-btn {
     background: #704b91;
@@ -1713,25 +1691,6 @@ nav ul li .dropdown-menu a:hover {
         grid-template-columns: 1fr;
         gap: 20px;
     }
-    
-    .workshop-item {
-        height: 300px;
-    }
-    
-    .workshop-text p {
-        font-size: 1rem;
-    }
-    
-    .workshop-front .length {
-        font-size: 1.5rem;
-        font-weight: bold;
-        margin: 2px 0;
-}
-
-    .workshop-front .totalclass  {
-        font-size: 1rem;
-        opacity: 0.9;
-}
 }
 
 @media (max-width: 768px) {
@@ -1745,29 +1704,6 @@ nav ul li .dropdown-menu a:hover {
         gap: 20px;
         width: 100%;
     }
-    
-    .workshop h1 {
-        line-height: 40px;
-    }
-
-    .workshop-item {
-        height: 300px;
-    }
-
-    .workshop-text p {
-        font-size: 1rem;
-    }
-    
-    .workshop-front .length {
-        font-size: 15px;
-        font-weight: bold;
-        margin: 2px 0;
-}
-
-    .workshop-front .totalclass  {
-        font-size: 15px;
-        opacity: 0.9;
-}
 }
 
 
@@ -1929,13 +1865,13 @@ nav ul li .dropdown-menu a:hover {
     font-size: 0.9rem;
 }
 
-.promotion-aside table {
+.membership-benefits table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
 }
 
-.promotion-aside th {
+.membership-benefits th {
     background-color: #704b91;
     color: white;
     font-weight: bold;
@@ -1944,7 +1880,7 @@ nav ul li .dropdown-menu a:hover {
     font-size: 0.9rem;
 }
 
-.promotion-aside td {
+.membership-benefits td {
     background-color: white;
     color: #333;
     padding: 8px;
@@ -1953,7 +1889,7 @@ nav ul li .dropdown-menu a:hover {
     font-size: 0.85rem;
 }
 
-.promotion-aside .register-btn {
+.membership-benefits .register-btn {
     background: #704b91;
     color: white;
     padding: 12px 24px;
