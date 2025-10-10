@@ -2397,7 +2397,8 @@ nav ul li .dropdown-menu a:hover {
     border: 2px solid #eee;
     width: 120px;
     height: 60px;
-    object-fit: cover;
+    object-fit: contain;
+    object-position: center;
     border: 1px solid #ddd;
 }
 

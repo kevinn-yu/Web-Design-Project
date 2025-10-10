@@ -65,7 +65,7 @@
         <p>Fill out the form below to reserve your spot.</p>
     </section>
 
-    <section>
+    <div>
          <form id="worksho_details" method="post" action="/submit-enquiry">
 
             <!-- Personal Info -->
@@ -169,7 +169,7 @@
                 <legend>Account & Preferences</legend>
 
                 <!-- Login ID -->
-                <label for="loginID">Login ID *</label>
+                <label for="loginID">Login ID:</label>
                 <input
                 id="loginID"
                 name="loginID"
@@ -178,10 +178,10 @@
                 pattern="^[A-Za-z0-9]{4,10}$"
                 title="4–10 letters or numbers"
                 required
-                placeholder="choose a login id">
+                placeholder="Choose a LOGIN ID">
 
                 <!-- Password -->
-                <label for="password">Password *</label>
+                <label for="password">Password:</label>
                 <input
                 id="password"
                 name="password"
@@ -189,21 +189,21 @@
                 minlength="8"
                 maxlength="25"
                 required
-                placeholder="min 8 characters">
+                placeholder="Min 8 characters">
 
                 <!-- Radio (membership type) -->
-                <p>Membership type *</p>
+                <label>Membership Type:</label>
                 <div class="workshop-radio">
-                <label><input type="radio" name="membershipType" value="standard" required> Standard</label>
-                <label><input type="radio" name="membershipType" value="premium"> Premium</label>
+                <label><input type="radio" name="membershipType" value="standard" id="standard" required> Standard</label>
+                <label><input type="radio" name="membershipType" value="premium" id="premium"> Premium</label>
                 </div>
 
-                <!-- Checkbox group (interests) -> server receives multiple values as interests[] -->
-                <p>Interests (choose any)</p>
+                <!-- Checkbox group (interests) -->
+                <label>Interests:</label>
                 <div class="workshop-check">
-                <label><input type="checkbox" name="interests[]" value="products"> Products</label>
-                <label><input type="checkbox" name="interests[]" value="workshops"> Workshops</label>
-                <label><input type="checkbox" name="interests[]" value="promotions"> Promotions</label>
+                <label><input type="checkbox" name="interests[]" value="products" id="products" required> Products</label>
+                <label><input type="checkbox" name="interests[]" value="workshops" id="workshops"> Workshops</label>
+                <label><input type="checkbox" name="interests[]" value="promotions" id="promotions"> Promotions</label>
                 </div>
             </fieldset>
 
@@ -223,7 +223,7 @@
                 required
                 placeholder="e.g. 0123456789">
 
-                <!-- Date (5th input type) — DOB for example -->
+                <!-- Date (5th input type) -->
                 <label for="dob">Date of birth *</label>
                 <input id="dob" name="dob" type="date" required>
 
@@ -251,7 +251,7 @@
             </div>
 
         </form>
-    </section>
+    </div>
     </main>
 
 <!-- Footer  -->
@@ -300,5 +300,3 @@
 </body>
 </html>
 
-</body>
-</html>

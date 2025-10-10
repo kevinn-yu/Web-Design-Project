@@ -161,7 +161,7 @@
                 <label>Services You're Interested In:</label>
                 <div class="checkbox-group">
                     <label class="checkbox-label">
-                        <input type="checkbox" name="interests" value="delivery"> Products
+                        <input type="checkbox" name="interests" value="delivery" required> Products
                     </label>
                     <label class="checkbox-label">
                         <input type="checkbox" name="interests" value="custom"> Custom Arrangements
@@ -173,7 +173,7 @@
             </div>
 
             <div class="form-group">
-                <label for="enquiryType">Type of Enquiry:*</label>
+                <label for="enquiryType">Type of Enquiry:</label>
                 <select id="enquiryType" name="enquiryType" required class="form-select">
                     <option value="" disabled selected>Select an option</option>
                     <option value="products">Product Information</option>
@@ -186,7 +186,7 @@
             </div>
 
             <div class="form-group">
-                <label for="preferredDate">Preferred Contact Date:*</label>
+                <label for="preferredDate">Preferred Contact Date:</label>
                 <input type="date" 
                     id="preferredDate"
                     name="preferredDate"
@@ -195,7 +195,7 @@
             </div>
 
             <div class="form-group">
-                <label for="comments">Your Message:*</label>
+                <label for="comments">Your Message:</label>
                 <textarea id="comments" name="comments" rows="4" 
                         placeholder="Describe your enquiry..." 
                         required
@@ -205,7 +205,7 @@
             </div>
 			
 			<div class="form-group">
-                    <label for="priority">Enquiry Priority</label>
+                    <label for="priority">Enquiry Priority:</label>
                     <input type="range" id="priority" name="priority" 
                            min="1" max="5" value="3">
                     <div class="priority-level">
@@ -219,10 +219,11 @@
             <legend>Verification</legend>
             
             <div class="form-group captcha-group">
-                <img src="IMAGE/captcha.jpg" alt="Captcha: 64 5BA" class="captcha-img">
+                <img src="IMAGE/captcha.png" alt="Captcha: 64 5BA" class="captcha-img">
                 <input type="text" id="captcha" name="captcha" 
                        placeholder="Enter captcha" 
                        required
+                       pattern="645BA"
                        title="Enter 'captcha' code as shown in the image">
             </div>
 
