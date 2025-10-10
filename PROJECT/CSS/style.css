@@ -2186,6 +2186,7 @@ nav ul li .dropdown-menu a:hover {
 .enquiry-reg {
     text-align: center;
     padding: 60px 20px 30px;
+    animation: fadeinenquiry 1s
 }
 
 .enquiry-reg h1 {
@@ -2193,11 +2194,13 @@ nav ul li .dropdown-menu a:hover {
     color: #3E2960;
     margin-bottom: 10px;
     font-weight: bold;
+    animation: fadeinenquiry 1s ease-in-out forwards;
 }
 
 .enquiry-reg p {
     color: #704b91;
     font-size: 1.1rem;
+    animation: fadeinenquiry 0.3s ease-in-out forwards;
 }
 
 
@@ -2216,25 +2219,6 @@ nav ul li .dropdown-menu a:hover {
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
-.enquiryform h1 {
-    color: #3e2960 ;
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    text-align: center;
-	animation: fadeinenquiry 1s ease-in-out forwards;
-    opacity: 0;
-}
-
-.enquiryform p {
-    color: black;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 25px;
-    text-align: center;
-	animation: fadeinenquiry 1s ease-in-out 0.3s forwards;
-    opacity: 0;
-}
 
 
 @keyframes fadeinenquiry {
