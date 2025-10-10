@@ -1947,11 +1947,24 @@ nav ul li .dropdown-menu a:hover {
     color: #3E2960;
     margin-bottom: 10px;
     font-weight: bold;
+    animation: fadeinworkshopreg 1s ease-in-out forwards;
 }
 
 .workshop-regiseration p {
     color: #704b91;
     font-size: 1.1rem;
+    animation: fadeinworkshopreg 1s ease-in-out forwards;
+}
+
+@keyframes fadeinworkshopreg {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Form layout */
@@ -2102,11 +2115,24 @@ nav ul li .dropdown-menu a:hover {
     color: #3E2960;
     margin-bottom: 10px;
     font-weight: bold;
+    animation: fadeinmembership 1s ease-in-out forwards;
 }
 
 .membership-text p {
     color: #704b91;
     font-size: 1.1rem;
+    animation: fadeinmembership 1s ease-in-out forwards;
+}
+
+@keyframes fadeinmembership {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 #membership-form {
@@ -2186,7 +2212,6 @@ nav ul li .dropdown-menu a:hover {
 .enquiry-reg {
     text-align: center;
     padding: 60px 20px 30px;
-    animation: fadeinenquiry 1s
 }
 
 .enquiry-reg h1 {
@@ -2200,7 +2225,7 @@ nav ul li .dropdown-menu a:hover {
 .enquiry-reg p {
     color: #704b91;
     font-size: 1.1rem;
-    animation: fadeinenquiry 0.3s ease-in-out forwards;
+    animation: fadeinenquiry 1s ease-in-out forwards;
 }
 
 
