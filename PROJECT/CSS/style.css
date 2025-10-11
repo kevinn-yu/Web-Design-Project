@@ -63,6 +63,21 @@ nav ul li {
 
 }
 
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 16px 28px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+nav ul li a img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
 /* Dropdown menu */
 nav ul li.dropdown {
     position: relative;
@@ -76,7 +91,6 @@ nav ul li .dropdown-menu {
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     z-index: 100;
     top: 100%;
-    left: 0;
     padding: 0;
 }
 
@@ -93,27 +107,12 @@ nav ul li .dropdown-menu a {
     padding: 16px 24px;
     background: transparent;
     transition: background 0.2s;
-    border-radius: 0;
 }
 
 nav ul li:hover .dropdown-menu {
     display: block;
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    padding: 16px 28px;
-    border-radius: 4px;
-    transition: background 0.2s;
-}
-
-nav ul li a img {
-    width: 24px;
-    height: 24px;
-    vertical-align: middle;
-    margin-right: 6px;
-}
 
 .tabsactive {
     background: rgba(223, 198, 198, 0.2);
@@ -957,8 +956,6 @@ nav ul li .dropdown-menu a:hover {
 /*Profile 2 (kevinn) */
 .container {
     max-width: 800px;
-    margin: 30px auto;
-    padding: 0 20px;
 }
 
 .profile-pic-container-kevinn {
@@ -973,22 +970,21 @@ nav ul li .dropdown-menu a:hover {
     padding: 20px;
 }
 
-.profile-pic {
+.profile-pic-kevinn {
     width: 200px;
     height: 200px;
     border-radius: 100%;
-    border: 2px groove black;
+    border: 2px groove white;
     padding: 8px;
     object-fit: cover;
+    transition: transform 0.3s;
 }
 
-.profile-pic:hover {
+.profile-pic-kevinn:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.basic-info {
+.basic-info-kevinn {
     text-align: center;
     margin-bottom: 40px;
 }
@@ -1001,20 +997,18 @@ nav ul li .dropdown-menu a:hover {
 }
 
 .student-id-kevinn {
-    font-family: Arial, sans-serif;
-    font-size: 1.1em;
+    font-size: 17px;
     margin-bottom: 8px;
 }
 
 .course-kevinn {
     color: #336699;
-    font-size: 1.1em;
+    font-size: 17px;
 }
 
 .profile-table-kevinn {
-    width: 100%;
     border-collapse: collapse;
-    margin: 0 auto 40px;
+    margin: 0 auto;
     border: 2px solid rgb(112, 112, 198);
 }
 
@@ -1033,6 +1027,7 @@ nav ul li .dropdown-menu a:hover {
 
 .profile-table-kevinn td {
     background-color: #CCFFFF; 
+    width: 70%;
 }
 
 
@@ -1630,13 +1625,14 @@ nav ul li .dropdown-menu a:hover {
     box-sizing: border-box;
 }
 
-.workshopsidebar h2 {
-    font-size: 20px;
-    margin-bottom: 20px;
-    color: #333;
-    padding-bottom: 10px;
+
+.workshopsidebar h3, .workshopsidebar h4 {
+    color: #3e2960;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
     border-bottom: 2px solid #704b91;
 }
+
 
 .workshopsidebar li {
     list-style: disc;
@@ -1646,22 +1642,12 @@ nav ul li .dropdown-menu a:hover {
 .category-item-workshop {
     padding: 10px 15px;
     margin-bottom: 5px;
-    border-radius: 4px;
-    transition: all 0.3s ease;
 }
 
 .category-item-workshop.active {
     background-color: #704b91;
     color: white;
 }
-
-.membership-benefits h4 {
-    color: #3e2960;
-    margin-bottom: 15px;
-    padding-bottom: 8px;
-    border-bottom: 2px solid #704b91;
-}
-
 
 
 .register-btn {
@@ -1787,14 +1773,13 @@ nav ul li .dropdown-menu a:hover {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    width: 70%;
+    flex: 70%;
     margin: 30px;
 }
 
 .card {
     background: white;
     border-radius: 12px;
-    overflow: hidden;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
 }
@@ -1811,7 +1796,7 @@ nav ul li .dropdown-menu a:hover {
 
 .card-content {
     padding: 25px;
-    text-align: left;
+    text-align: justify;
 }
 
 .card-content h3 {
@@ -1823,10 +1808,8 @@ nav ul li .dropdown-menu a:hover {
 }
 
 .card-content p {
-    color: #666;
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 0;
+    color: black;
+    font-size: 16px;
 }
 
 .promotion-aside {
@@ -1860,8 +1843,8 @@ nav ul li .dropdown-menu a:hover {
 
 .promotion-aside dd {
     margin: 0 0 10px 15px;
-    color: #666;
-    font-size: 0.9rem;
+    color: black;
+    font-size: 14px;
 }
 
 .membership-benefits table {
@@ -1876,7 +1859,7 @@ nav ul li .dropdown-menu a:hover {
     font-weight: bold;
     padding: 10px 8px;
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 16px;
 }
 
 .membership-benefits td {
@@ -1885,7 +1868,7 @@ nav ul li .dropdown-menu a:hover {
     padding: 8px;
     text-align: center;
     border: 1px solid #e0e0e0;
-    font-size: 0.85rem;
+    font-size: 12px;
 }
 
 .membership-benefits .register-btn {
@@ -1916,21 +1899,18 @@ nav ul li .dropdown-menu a:hover {
         object-fit: contain;
     }
     
-    .promotion-features {
-        padding: 40px 20px;
-    }
 }
 
 @media (max-width: 1087px) {
     .promotion-features {
         display: flex;
         flex-wrap: wrap;
-        flex-direction: column
+        flex-direction: column;
     }
 
     .feature-cards {
         width: 100%;
-        margin-left: 0px;
+        margin-left: 0;
     }
 }
 
