@@ -1476,6 +1476,8 @@ nav ul li .dropdown-menu a:hover {
 .workshop-image img {
     width: 100%;
     border-radius: 8px;
+    height: 300px;
+    object-fit: cover;
 }
 
 .workshop-image figcaption {
@@ -1764,6 +1766,8 @@ nav ul li .dropdown-menu a:hover {
 .promotion-image img {
     width: 100%;
     border-radius: 8px;
+    height: 300px;
+    object-fit: cover;
 }
 
 .promotion-image figcaption {
