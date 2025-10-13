@@ -629,7 +629,7 @@ nav ul li .dropdown-menu a:hover {
     margin-top: 5px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 7px;
 }
 
 .other a {
@@ -1720,7 +1720,7 @@ nav ul li .dropdown-menu a:hover {
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: bold;
     transition: background 0.3s;
     width: 100%;
@@ -3052,7 +3052,7 @@ nav ul li .dropdown-menu a:hover {
     border-radius: 8px;
     margin-bottom: 30px;
     width: 50%;
-    height: 600px;
+    height: 800px;
     transition: all 0.3s ease;
 }
 
